@@ -17,10 +17,11 @@ export default function Friends({ friends }) {
       )}
       <div className="profile_card_grid">
         {friends &&
-          friends.slice(0, 9).map((friend) => (
+          friends.slice(0, 9).map((friend, index) => (
             <Link
               to={`/profile/${friend.username}`}
               className="profile_photo_card"
+              key={index}
             >
               <img src={friend.picture} alt="" />
               <span>
